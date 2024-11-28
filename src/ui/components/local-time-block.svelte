@@ -95,12 +95,6 @@
           onGripMouseDown(t.copy(task), EditMode.DRAG);
         }}
         onMove={() => onGripMouseDown(task, EditMode.DRAG)}
-        onMoveWithNeighbors={() => {
-          onGripMouseDown(task, EditMode.DRAG_AND_SHIFT_OTHERS);
-        }}
-        onMoveWithShrink={() => {
-          onGripMouseDown(task, EditMode.DRAG_AND_SHRINK_OTHERS);
-        }}
       />
     </FloatingUi>
   {/if}
@@ -117,12 +111,6 @@
           onResize={() => {
             onResizerMouseDown(task, EditMode.RESIZE);
           }}
-          onResizeWithNeighbors={() => {
-            onResizerMouseDown(task, EditMode.RESIZE_AND_SHIFT_OTHERS);
-          }}
-          onResizeWithShrink={() => {
-            onResizerMouseDown(task, EditMode.RESIZE_AND_SHRINK_OTHERS);
-          }}
         />
       </FloatingUi>
     {/if}
@@ -137,15 +125,6 @@
         <ResizeControls
           onResize={() => {
             onResizerMouseDown(task, EditMode.RESIZE_FROM_TOP);
-          }}
-          onResizeWithNeighbors={() => {
-            onResizerMouseDown(task, EditMode.RESIZE_FROM_TOP_AND_SHIFT_OTHERS);
-          }}
-          onResizeWithShrink={() => {
-            onResizerMouseDown(
-              task,
-              EditMode.RESIZE_FROM_TOP_AND_SHRINK_OTHERS,
-            );
           }}
           reverse
         />
